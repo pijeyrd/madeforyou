@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Letter For You</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: url(sunset.jpeg);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .love-letter {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            width: 90%;
+            text-align: center;
+            animation: fadeIn 1s ease-in-out;
+            border: 2px solid #e53935;
+        }
+        h1 {
+            color: #e53935;
+            font-size: 28px;
+            margin-bottom: 20px;
+            animation: slideInLeft 1s ease-in-out;
+        }
+        p {
+            color: #333;
+            line-height: 1.6;
+            margin-bottom: 10px;
+            animation: slideInRight 1s ease-in-out;
+        }
+        .more-messages-button {
+            background-color: #e53935;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 20px;
+            animation: slideInUp 1s ease-in-out;
+        }
+        .more-messages-button:hover {
+            background-color: #c62828;
+        }
+        .hidden {
+            display: none;
+        }
+
+        /* Keyframe animations */
+        @keyframes slideInLeft {
+            from {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+        @keyframes slideInRight {
+            from {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+        @keyframes slideInUp {
+            from {
+                transform: translateY(100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="love-letter">
+    <h1>To My Lovey,</h1>
+    <p>
+        Hi Maby, I made this out of nowhere HAHAHAHAHAHAHA. By the way, In the quiet moments of the day, when the world seems to slow down and all that remains is the gentle rhythm of our breaths, I find myself overwhelmed by the depth of my feelings for you. Though I may not be one for grand gestures or extravagant displays, know that my love for you burns with a quiet intensity that words struggle to convey.
+    </p>
+    <p>
+        Your smile brightens my day, and your laughter is the sweetest melody. I am captivated by your kindness, your strength,
+        and the love you shower upon me.
+    </p>
+    <p class="hidden">
+        It's in the simple things – the way your laughter fills the room, the warmth of your touch, the comfort of your presence – that I find solace and contentment. Your kindness, your understanding, and your unwavering support have become the pillars upon which I lean, grounding me in a world that can often feel tumultuous and uncertain.
+    </p>
+    <p class="hidden">
+        I may not always say it, but every beat of my heart whispers your name, every thought is colored by your essence, and every action is driven by the desire to see you smile. You are my rock, my sanctuary, my home.
+    </p>
+    <p class="hidden">
+        I LOVE YOU MORE THAN YOU KNOW!
+    </p>
+    <button id="moreMessagesButton" class="more-messages-button">more please</button>
+    <p>Forever and always,</p>
+    <p>Jaezelle Pogi</p>
+</div>
+
+<script>
+    const moreMessagesButton = document.getElementById('moreMessagesButton');
+    const hiddenMessages = document.querySelectorAll('.hidden');
+
+    moreMessagesButton.addEventListener('click', () => {
+        hiddenMessages.forEach((message, index) => {
+            setTimeout(() => {
+                message.style.display = 'block';
+                message.classList.add('animated');
+            }, (index + 1) * 500);
+        });
+        moreMessagesButton.style.display = 'none';
+    });
+</script>
+
+</body>
+</html>
